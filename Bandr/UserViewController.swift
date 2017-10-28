@@ -9,25 +9,40 @@
 import UIKit
 
 class UserViewController: UIViewController, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userBio: UILabel!
+    //    @IBAction func backButton(_ sender: Any) {
+    //        dismiss(animated: true, completion: nil)
+    //    }
     
     var user: User? = nil
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
+        
         userName.text = user?.name
         userBio.text = user?.bio
-//        userInstrument.text = user.instrument
+        //        userInstrument.text = user.instrument
         loadPictures(images: (user?.images)!)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void{
+        if gesture.direction == UISwipeGestureRecognizerDirection.down {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     // need to send in images array
@@ -47,16 +62,17 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
             imgView.frame = CGRect(x: xpos, y: 0, width: self.view.frame.width, height: self.scrollView.frame.height)
             self.scrollView.addSubview(imgView)
         }
-
+        
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

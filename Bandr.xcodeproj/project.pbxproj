@@ -20,6 +20,7 @@
 		FD1D96BA1F9EDCA300B6AD84 /* KoladaViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D96B91F9EDCA300B6AD84 /* KoladaViewAnimator.swift */; };
 		FD1D96BC1F9EDFE400B6AD84 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D96BB1F9EDFE400B6AD84 /* SwipeDirection.swift */; };
 		FD1D96BE1F9EE3F200B6AD84 /* KolodaCardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1D96BD1F9EE3F200B6AD84 /* KolodaCardStorage.swift */; };
+		FD3884B21FA5288C0052C9D1 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3884B31FA5288C0052C9D1 /* pop.framework */; };
 		FD456B3E1FA17B21000665BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD1D96821F9EBCB700B6AD84 /* Main.storyboard */; };
 		FD456B3F1FA17B24000665BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD1D96871F9EBCB700B6AD84 /* LaunchScreen.storyboard */; };
 		FD456B471FA17F21000665BF /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD456B451FA17F20000665BF /* OverlayView.xib */; };
@@ -44,19 +45,6 @@
 			remoteInfo = Bandr;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FD1D96B81F9EDABE00B6AD84 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B08E35B689CC949DA3AC90C /* Pods-BandrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BandrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BandrTests/Pods-BandrTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +75,8 @@
 		FD1D96B91F9EDCA300B6AD84 /* KoladaViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoladaViewAnimator.swift; sourceTree = "<group>"; };
 		FD1D96BB1F9EDFE400B6AD84 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		FD1D96BD1F9EE3F200B6AD84 /* KolodaCardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaCardStorage.swift; sourceTree = "<group>"; };
+		FD3884AF1FA5281A0052C9D1 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3884B31FA5288C0052C9D1 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD456B461FA17F20000665BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Bandr/Base.lproj/OverlayView.xib; sourceTree = "<group>"; };
 		FD456B481FA18A36000665BF /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FD456B4B1FA28196000665BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -98,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3884B21FA5288C0052C9D1 /* pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +114,7 @@
 		1BBC671FDF390913CF58B57D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD3884B31FA5288C0052C9D1 /* pop.framework */,
 				D471F3F2CA559312D727DB55 /* Pods_Bandr.framework */,
 				4C575483C97E3129FFAC83A9 /* Pods_BandrTests.framework */,
 				533BC012183190002441F094 /* Pods_BandrUITests.framework */,
@@ -146,6 +138,7 @@
 		FD1D96721F9EBCB700B6AD84 = {
 			isa = PBXGroup;
 			children = (
+				FD3884AF1FA5281A0052C9D1 /* pop.framework */,
 				FD456B451FA17F20000665BF /* OverlayView.xib */,
 				FD1D967D1F9EBCB700B6AD84 /* Bandr */,
 				FD1D96921F9EBCB700B6AD84 /* BandrTests */,
@@ -227,7 +220,6 @@
 				FD1D96791F9EBCB700B6AD84 /* Resources */,
 				378D58BA0A59845A89D1FE45 /* [CP] Embed Pods Frameworks */,
 				9F43DE617A882B2BF466004A /* [CP] Copy Pods Resources */,
-				FD1D96B81F9EDABE00B6AD84 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
