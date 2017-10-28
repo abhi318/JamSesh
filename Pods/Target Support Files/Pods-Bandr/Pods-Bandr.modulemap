@@ -1,0 +1,6 @@
+framework module Pods_Bandr {
+  umbrella header "Pods-Bandr-umbrella.h"
+
+  export *
+  module * { export * }
+}
