@@ -13,6 +13,8 @@ class selfUserViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userBio: UITextField!
+    @IBOutlet weak var userInstrument: UITextField!
+    
     @IBOutlet weak var img1: UIImageView!
     @IBOutlet weak var img2: UIImageView!
     @IBOutlet weak var img3: UIImageView!
@@ -42,7 +44,7 @@ class selfUserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let user = User(name: userName.text!, bio: userBio.text, instrument: "instrument", images: userImages)
+        let user = User(name: userName.text!, bio: userBio.text, instrument: userInstrument.text, images: userImages)
         if segue.identifier == "addedNewUserSegue" {
             print("hello")
             print(segue.destination)
@@ -73,7 +75,14 @@ class selfUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+
         userImageViews += [img1, img2, img3, img4, img5, img6]
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {

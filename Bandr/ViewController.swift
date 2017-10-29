@@ -136,10 +136,10 @@ extension ViewController: KolodaViewDataSource {
         let name = UILabel()
         let instrument = UILabel()
         v.frame = CGRect(x: 0, y: 0, width: cardView.frame.width, height: cardView.frame.height)
-        
+        v.backgroundColor = cardView.backgroundColor
         
         image.contentMode = .scaleAspectFit
-        image.frame = CGRect(x: 0, y: 0, width: v.frame.width, height: v.frame.height/8 * 7)
+        image.frame = CGRect(x:0, y:0, width: v.frame.width, height: v.frame.height/8 * 7)
         name.frame = CGRect(x: 0, y: v.frame.height/8 * 7, width: v.frame.width, height: v.frame.height/14)
         instrument.frame = CGRect(x: 0, y: v.frame.height/8 * 7 + v.frame.height/14, width: v.frame.width, height: v.frame.height/14)
         print(v.frame.minY)
