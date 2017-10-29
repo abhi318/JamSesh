@@ -8,7 +8,9 @@ target 'Bandr' do
 
   # Pods for Bandr
     pod 'pop', '~> 1.0'
-
+    pod 'Alamofire'
+    pod 'Stripe'
+    
   target 'BandrTests' do
     inherit! :search_paths
     # Pods for testing
